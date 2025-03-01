@@ -1,53 +1,108 @@
-Before we begin, make sure you have the following:
+Here's a well-structured and polished version of your README file:  
 
-Python installed on your machine (version 3.10 or higher is recommended)
+---
 
-Ollama installed
+# **DeepSeek RAG Agent**  
 
-Your Qdrant and Exa AI (optional) API key
+A **local RAG (Retrieval-Augmented Generation) reasoning agent** powered by **DeepSeek R1**, **LangChain**, and **Qdrant** for document-based chat interactions.  
 
-A code editor of your choice (we recommend VS Code or PyCharm for their excellent Python support)
+---
 
-Basic familiarity with Python programming
+## **Prerequisites**  
+Before we begin, ensure you have the following installed and ready:  
 
-Initial setup and API keys:
+✅ **Python** (Version **3.10 or higher** recommended)  
+✅ **Ollama** installed on your machine  
+✅ **Qdrant Cloud** API key (for RAG mode)  
+✅ **Exa AI API key** (optional, for web search)  
+✅ **A code editor** (Recommended: **VS Code** or **PyCharm**)  
+✅ **Basic familiarity with Python programming**  
 
-Ollama Setup
+---
 
-Install Ollama
+## **Installation & Setup**  
 
-Pull the Deepseek r1 model(s):
+### **1️⃣ Ollama Setup**  
+**Step 1:** Install Ollama (Follow [Ollama’s official guide](https://ollama.ai/))  
 
-For the lighter model
- ollama pull deepseek-r1:1.5b 
+**Step 2:** Pull the required models:  
 
-For the more capable model (if your hardware supports it)
-ollama pull deepseek-r1:7b
+- **DeepSeek R1 Models:**  
+  - For the **lighter** model:  
+    ```bash
+    ollama pull deepseek-r1:1.5b
+    ```
+  - For the **more capable** model (requires better hardware):  
+    ```bash
+    ollama pull deepseek-r1:7b
+    ```
 
-Pull Snowflake Arctic Enbed model
-ollama pull snowflake-arctic-embed
+- **Snowflake Arctic Embed Model:**  
+  ```bash
+  ollama pull snowflake-arctic-embed
+  ```
 
-Pull Llama 3.2 model
-ollama pull llama3.2
+- **Llama 3.2 Model (for Web Search Agent):**  
+  ```bash
+  ollama pull llama3.2
+  ```
 
-Qdrant Cloud Setup (for RAG Mode)
+---
 
-Visit Qdrant Cloud
+### **2️⃣ Qdrant Cloud Setup (for RAG Mode)**  
+**Step 1:** Visit [Qdrant Cloud](https://cloud.qdrant.io)  
 
-Create an account or sign in
+**Step 2:** Sign up or log in  
 
-Create a new cluster
+**Step 3:** Create a new **cluster**  
 
-Get your credentials:
+**Step 4:** Get your API credentials:  
+- **Qdrant API Key:** Found in the "API Keys" section  
+- **Qdrant URL:** Your cluster URL (format: `https://xxx-xxx.cloud.qdrant.io`)  
 
-Qdrant API Key: Found in API Keys section
+---
 
-Qdrant URL: Your cluster URL (format: https://xxx-xxx.cloud.qdrant.io)
+### **3️⃣ Exa AI API Key (Optional for Web Search)**  
+**Step 1:** Visit [Exa AI](https://exa.ai)  
 
-Exa AI API Key (Optional)
+**Step 2:** Sign up for an account  
 
-Visit Exa AI
+**Step 3:** Generate an **API key** from your account settings  
 
-Sign up for an account
+---
 
-Generate an API key
+## **Running the Application**  
+
+1. **Clone the repository:**  
+   ```bash
+   git clone https://github.com/yourusername/deepseek-rag-agent.git
+   cd deepseek-rag-agent
+   ```
+
+2. **Install dependencies:**  
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Run the Streamlit app:**  
+   ```bash
+   streamlit run deepseek_rag_agent.py
+   ```
+
+---
+
+## **Features**  
+✅ **PDF & Web Content Processing** – Upload and analyze documents or web content  
+✅ **Retrieval-Augmented Generation (RAG)** – Leverages Qdrant for better context retrieval  
+✅ **Custom Agents** – Web search agent (optional) powered by Exa AI  
+✅ **Multi-Model Support** – Use **DeepSeek R1**, **Llama3.2**, and **Snowflake Arctic Embed**  
+✅ **Streamlit UI** – User-friendly chat interface  
+
+---
+
+## **Contributing**  
+We welcome contributions! Feel free to **fork** the repository, **open issues**, and submit **pull requests**.  
+
+---
+
+This version is **clear, structured, and professional** while maintaining **readability**. Let me know if you'd like any modifications! 🚀
