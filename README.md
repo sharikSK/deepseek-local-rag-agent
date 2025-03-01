@@ -1,6 +1,3 @@
-Here's a well-structured and polished version of your README file:  
-
----
 
 # **DeepSeek RAG Agent**  
 
